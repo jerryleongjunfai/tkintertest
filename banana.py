@@ -1,10 +1,11 @@
-print("I eat banana 🍌 and a another banana 🍌")
+def sort(nums):
+    for i in range(len(nums)-1,0,-1):
+        for j in range(i):
+            if nums[j] > nums[j+1]:
+                temp = nums[j]
+                nums[j] = nums[j+1]
+                nums[j+1] = temp
 
-def eat():
-    print("I eat banana 🍌")
-
-def eat_another():
-    print("I eat another banana 🍌")
-
-eat()
-eat_another()
+nums = [5, 3, 8, 6, 7, 2]
+sort(nums)
+print(nums)  # [2, 3, 5, 6, 7, 8]
